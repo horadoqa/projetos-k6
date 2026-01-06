@@ -1,0 +1,35 @@
+{
+  "name": "load-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "har-to-k6": "node ./har-to-k6.js",
+    "csv-to-json": "node ./csv-to-json.js",
+    "k6": "k6 run",
+    "build": "babel k6 -d es5 --copy-files --delete-dir-on-start",
+    "k6-es5": "k6 run --compatibility-mode=base",
+    "lint": "eslint ./k6",
+    "lint:fix": "eslint ./k6 --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "repository"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parse": "^5.3.1",
+    "har-to-k6": "^0.13.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
+    "eslint": "^8.29.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.6.0",
+    "eslint-plugin-promise": "^6.1.1"
+  }
+}

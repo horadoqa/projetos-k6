@@ -1,0 +1,23 @@
+{
+    "hosts": {
+      "globo.com": "186.192.83.12"
+    },
+    "stages": [
+      {
+        "duration": "10s",
+        "target": 10
+      },
+      {
+        "duration": "10s",
+        "target": 30
+      },
+      {
+        "duration": "10s",
+        "target": 0
+      }
+    ],
+    "thresholds": {
+      "http_req_duration": ["avg<100", "p(95)<200"]
+    },
+    "noConnectionReuse": true
+  }
